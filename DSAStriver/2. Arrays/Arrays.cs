@@ -9,8 +9,41 @@
 
             BasicProblmes problems = new BasicProblmes();
             int[] numbers = { 10, 20, 30, 40 };
-            foreach (int number in numbers) 
-            Console.WriteLine("Largest element of Array is: " + problems.LargestElement(numbers));
+
+            var largest = 0;
+            foreach (int number in numbers)
+                largest = problems.LargestElement(numbers);
+            Console.WriteLine("Largest element of Array is: " + largest);
+            Console.WriteLine();
+
+            int[] arr1 = { 10, 20, 5, 8 };    // -> 10
+            int[] arr2 = { 5, 5, 5 };         // -> No second largest
+            int[] arr3 = { 1 };               // -> Array must have at least 2 elements
+            int[] arr4 = { -3, -1, -2 };      // -> -2
+
+            Console.WriteLine("Second Largest element of Array is: " + problems.SecondLargestElement(arr1));
+            Console.WriteLine("Second Largest element of Array is: " + problems.SecondLargestElement(arr2));
+            Console.WriteLine("Second Largest element of Array is: " + problems.SecondLargestElement(arr3));
+            Console.WriteLine("Second Largest element of Array is: " + problems.SecondLargestElement(arr4));
+
+            Console.WriteLine();
+            Console.WriteLine("Is Array Sorted: " + problems.IsArraySorted(arr1));
+            Console.WriteLine("Is Array Sorted: " + problems.IsArraySorted(arr2));
+            Console.WriteLine("Is Array Sorted: " + problems.IsArraySorted(arr3));
+            Console.WriteLine("Is Array Sorted: " + problems.IsArraySorted(arr4));
+
+            Console.WriteLine("Current Array");
+            foreach (var num in arr1)
+            {
+                Console.Write(num + " ");
+            }
+            Console.WriteLine();
+            Console.WriteLine("Reversed Array");
+            var newArray = problems.ReverseArray(arr1);
+            foreach (var num in newArray)
+            {
+                Console.Write(num +  " ");
+            }
         }
     }
 
@@ -81,7 +114,7 @@
     #region Basic Problems
     public class BasicProblmes()
     {
-        // Largest Element in an Array
+        #region 1. Largest Element in an Array
         public int LargestElement(int[] arr)
         {
             int max = arr[0];
@@ -92,6 +125,58 @@
             }
             return max;
         }
+        #endregion
+
+        #region 2. 2nd Largest Element in an Array
+        public int SecondLargestElement(int[] arr)
+        {
+            int largest = int.MinValue, second = int.MinValue; // -2147483648, this is the min valud of int and is added to consider -ve numbers as well
+            
+            if (arr.Length < 2) return -1;
+
+            foreach (var num in arr)
+            {
+                if (num > largest)
+                {
+                    second = largest;
+                    largest = num;
+                }
+                else if (num > second && num != largest)    // 2nd condition coz largest != smallest as both should be different and largest > smallest
+                {
+                    second = num;
+                }
+            }
+            return second == int.MinValue ? -1 : second;
+        }
+        #endregion
+
+        #region 3. Is Array Sorted ?
+        public bool IsArraySorted(int[] arr)
+        {
+            for (int i = 0; i < arr.Length - 1; i++)
+            {
+                if (arr[i] > arr[i + 1]) return false;
+            }
+            return true;
+        }
+        #endregion
+
+        #region 4. Reverse an Array
+        public int[] ReverseArray(int[] arr)
+        {
+            // 10, 20, 5, 8
+            int i = 0, j = arr.Length - 1;
+            while (i < j)
+            {
+                int temp = arr[i];
+                arr[i] = arr[j];
+                arr[j] = temp;
+                i++;
+                j--;
+            }
+            return arr;
+        }
+        #endregion
     }
     #endregion
 }
