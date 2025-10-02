@@ -1,4 +1,6 @@
-﻿namespace DSAStriver._2._Arrays
+﻿using DSAStriver._2._Arrays.LeetCodeProblems;
+
+namespace DSAStriver._2._Arrays
 {
     public class Arrays
     {
@@ -15,6 +17,7 @@
                 largest = problems.LargestElement(numbers);
             Console.WriteLine("Largest element of Array is: " + largest);
             Console.WriteLine();
+            // ----------------------------------------------------------------------------------------------
 
             int[] arr1 = { 10, 20, 5, 8 };    // -> 10
             int[] arr2 = { 5, 5, 5 };         // -> No second largest
@@ -25,12 +28,14 @@
             Console.WriteLine("Second Largest element of Array is: " + problems.SecondLargestElement(arr2));
             Console.WriteLine("Second Largest element of Array is: " + problems.SecondLargestElement(arr3));
             Console.WriteLine("Second Largest element of Array is: " + problems.SecondLargestElement(arr4));
+            // ----------------------------------------------------------------------------------------------
 
             Console.WriteLine();
             Console.WriteLine("Is Array Sorted: " + problems.IsArraySorted(arr1));
             Console.WriteLine("Is Array Sorted: " + problems.IsArraySorted(arr2));
             Console.WriteLine("Is Array Sorted: " + problems.IsArraySorted(arr3));
             Console.WriteLine("Is Array Sorted: " + problems.IsArraySorted(arr4));
+            // ----------------------------------------------------------------------------------------------
 
             Console.WriteLine("Current Array");
             foreach (var num in arr1)
@@ -44,6 +49,22 @@
             {
                 Console.Write(num +  " ");
             }
+            // ----------------------------------------------------------------------------------------------
+
+
+        }
+
+        public void LeetCodeMethods()
+        {
+            TwoSum ts = new TwoSum();
+            int[] arr = { 10, 20, 4, 7, 5 };
+            int target = 9;
+            int[] result = ts.TwoSumArrayBasic(arr, target);
+            Console.WriteLine($"Two Sum Basic Solution: [{result[0]}, {result[1]}]");
+
+            Console.WriteLine();
+            int[] dictResult = ts.TwoSumDictionary(arr, target);
+            Console.WriteLine($"Two Sum using Dictionary: [{dictResult[0]}, {dictResult[1]}]");
         }
     }
 
