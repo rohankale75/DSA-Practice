@@ -56,6 +56,7 @@ namespace DSAStriver._2._Arrays
 
         public void LeetCodeMethods()
         {
+            #region Two Sum (Problem No 1 on Leetcode)
             TwoSum ts = new TwoSum();
             int[] arr = { 10, 20, 4, 7, 5 };
             int target = 9;
@@ -65,6 +66,18 @@ namespace DSAStriver._2._Arrays
             Console.WriteLine();
             int[] dictResult = ts.TwoSumDictionary(arr, target);
             Console.WriteLine($"Two Sum using Dictionary: [{dictResult[0]}, {dictResult[1]}]");
+            #endregion
+
+            #region Best Time to Buy And Sell Stock (Problem No 121 on Leetcode)
+            BestTimeToBuySellStock bs = new BestTimeToBuySellStock();
+            int[] prices = { 7, 1, 5, 3, 6, 4 };
+            // Output = 5 (Profit = 6 - 1 = 5)
+            Console.WriteLine();
+            Console.WriteLine("Best Time to Buy and Sell Stock is: " + bs.MaxProfit(prices));
+
+            // int[] prices = { 7,6,4,3,1 }
+            // Output = 0 
+            #endregion
         }
     }
 
