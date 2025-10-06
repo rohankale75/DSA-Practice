@@ -78,6 +78,12 @@ namespace DSAStriver._2._Arrays
             // int[] prices = { 7,6,4,3,1 }
             // Output = 0 
             #endregion
+
+            #region Contains Duplicate (Using HashSet, Problem No 217 on Leetcode)
+            ContainsDuplicate cd = new ContainsDuplicate();
+            int[] array = { 1, 2, 3, 1 };
+            Console.WriteLine("Does Array Contains Duplicate element: " + cd.ContainsDuplicateElement(array));
+            #endregion
         }
     }
 
