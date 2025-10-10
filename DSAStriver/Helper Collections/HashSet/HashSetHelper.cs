@@ -40,23 +40,23 @@ namespace DSAStriver.Helper_Collections.HashSet
             HashSet<int> set1 = new HashSet<int>() { 1, 2, 3 };
             HashSet<int> set2 = new HashSet<int>() { 3, 4, 5 };
 
-            // Union (All Unique Elements)
+            // 7. Union (All Unique Elements)
             set1.UnionWith(set2);
             Console.WriteLine("Union: " + string.Join(", ", set1)); // Output: 1, 2, 3, 4, 5
 
-            // Reset and Intersect
+            // 8. Reset and Intersect
             set1 = new HashSet<int>() { 1, 2, 3 };
             set1.IntersectWith(set2);
             Console.WriteLine("Intersaction: " + string.Join(" ", set1));   // Output: 3
 
-            // 7. Set Comparison
+            // 9. Set Comparison
             HashSet<int> a = new HashSet<int>() { 1, 2 };
             HashSet<int> b = new HashSet<int>() { 1, 2, 3 };
 
             Console.WriteLine("Is A subset of B: " + a.IsSubsetOf(b));  // True
             Console.WriteLine("Is B superset of A: " + b.IsSupersetOf(a));  // True
 
-            // 8. Loop through Set
+            // 10. Loop through Set
             HashSet<string> names = new HashSet<string>() { "Lewis", "George", "Oscar" };
             foreach (var name in names)
             {
