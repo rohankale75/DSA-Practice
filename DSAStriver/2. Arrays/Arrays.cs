@@ -56,7 +56,7 @@ namespace DSAStriver._2._Arrays
 
         public void LeetCodeMethods()
         {
-            #region Two Sum (Problem No 1 on Leetcode)
+            #region 1. Two Sum (Problem No 1 on Leetcode)
             TwoSum ts = new TwoSum();
             int[] arr = { 10, 20, 4, 7, 5 };
             int target = 9;
@@ -68,7 +68,7 @@ namespace DSAStriver._2._Arrays
             Console.WriteLine($"Two Sum using Dictionary: [{dictResult[0]}, {dictResult[1]}]");
             #endregion
 
-            #region Best Time to Buy And Sell Stock (Problem No 121 on Leetcode)
+            #region 2. Best Time to Buy And Sell Stock (Problem No 121 on Leetcode)
             BestTimeToBuySellStock bs = new BestTimeToBuySellStock();
             int[] prices = { 7, 1, 5, 3, 6, 4 };
             // Output = 5 (Profit = 6 - 1 = 5)
@@ -79,10 +79,33 @@ namespace DSAStriver._2._Arrays
             // Output = 0 
             #endregion
 
-            #region Contains Duplicate (Using HashSet, Problem No 217 on Leetcode)
+            #region 3. Contains Duplicate (Using HashSet, Problem No 217 on Leetcode)
             ContainsDuplicate cd = new ContainsDuplicate();
             int[] array = { 1, 2, 3, 1 };
             Console.WriteLine("Does Array Contains Duplicate element: " + cd.ContainsDuplicateElement(array));
+            #endregion
+
+            #region 4. Majority Element
+            MajorityElement me = new MajorityElement();
+            int[] meArr = { 2, 2, 1, 1, 1, 2, 2 };
+            Console.WriteLine("Majority Element using Dictionary: " + me.MajorityElementDictionary(meArr));
+            Console.WriteLine("Majority Element using Boyer Moore Algo: " + me.MajorityElementBoyerMooreAlgo(meArr));
+            #endregion
+
+            #region 5. Intersection of Two Arrays
+            IntersectionOfTwoArrays intersection = new IntersectionOfTwoArrays();
+            int[] intArr = { 4, 9, 5 };
+            int[] intArr2 = { 9, 4, 9, 8, 4 };
+            var intResult = intersection.Intersect(intArr, intArr2);
+            Console.WriteLine("Intersection of Two Arrays: ");
+            foreach (int item in  intResult)
+            {
+                Console.Write(item + " ");
+            }
+            #endregion
+
+            #region 6. 
+
             #endregion
         }
     }
