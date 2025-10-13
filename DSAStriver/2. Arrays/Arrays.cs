@@ -104,8 +104,12 @@ namespace DSAStriver._2._Arrays
             }
             #endregion
 
-            #region 6. 
-
+            #region 6. Anagram
+            Anagram ang = new Anagram();
+            string s = "anagram", t = "nagaram";    // return true
+            // 2nd Exaple => s = "rat", t = "car"   // retrun false
+            Console.WriteLine("Are both strings Anagram by Dictionary: " + ang.IsAnagramUsingDictionary(s, t));
+            Console.WriteLine("Are both strings Anagram by Sorting: " + ang.IsAngramBySorting(s, t));
             #endregion
         }
     }
