@@ -111,6 +111,12 @@ namespace DSAStriver._2._Arrays
             Console.WriteLine("Are both strings Anagram by Dictionary: " + ang.IsAnagramUsingDictionary(s, t));
             Console.WriteLine("Are both strings Anagram by Sorting: " + ang.IsAngramBySorting(s, t));
             #endregion
+
+            #region 8. Maximum Sub Array (Kadane's Algorithm)
+            MaximumSubArray maximum = new MaximumSubArray();
+            int[] arrayMaxSub = { -2, 1, -3, 4, -1, 2, 1, -5, 4 };
+            Console.WriteLine("Maximum SubArray Sum is: " + maximum.MaximumSubArrayKadaneAlgo(arrayMaxSub));
+            #endregion
         }
     }
 
