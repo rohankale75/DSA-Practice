@@ -5,7 +5,7 @@ namespace DSAStriver._2._Arrays.LeetCodeProblems
 {
     public class ContainsDuplicate
     {
-        #region Problem
+        #region Problem (LC 217, E)
         //Given an integer array nums, return true if any value appears at least twice in the array, and return false if every element is distinct.
 
         //Example 1:
@@ -35,6 +35,15 @@ namespace DSAStriver._2._Arrays.LeetCodeProblems
         //-109 <= nums[i] <= 109
         #endregion
 
+        #region Complexity
+        // Time Complexity: O(n)
+        //  Reason: Loops through every element in worst case scenario
+
+        // Space Complexity: O(n)
+        // Reason: Needs space to story every element of arrya if duplicate not found
+        #endregion
+
+        #region Solution
         public bool ContainsDuplicateElement(int[] array)
         {
             if (array.Length < 1) return false;
@@ -47,5 +56,6 @@ namespace DSAStriver._2._Arrays.LeetCodeProblems
             }
             return false;
         }
+        #endregion
     }
 }

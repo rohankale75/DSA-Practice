@@ -1,18 +1,29 @@
-﻿namespace DSAStriver._2._Arrays.LeetCodeProblems
+﻿using Microsoft.VisualBasic;
+using System.Xml;
+using static System.Runtime.InteropServices.JavaScript.JSType;
+
+namespace DSAStriver._2._Arrays.LeetCodeProblems
 {
     public class IntersectionOfTwoArrays
     {
-        //  Example 1:
+        #region Problem (LC 349, E)
+        //  349. Intersection of Two Arrays
 
-        //  Input: nums1 = [1, 2, 2, 1], nums2 = [2, 2]
-        //  Output: [2, 2]
+        //  Given two integer arrays nums1 and nums2, return an array of their intersection.Each element in the result must be unique and you may return the result in any order.
 
-        //  Example 2:
+        //Example 1:
 
-        //  Input: nums1 = [4, 9, 5], nums2 = [9, 4, 9, 8, 4]
-        //  Output: [4, 9]
-        //  Explanation: [9, 4] is also accepted.
+        //Input: nums1 = [1, 2, 2, 1], nums2 = [2, 2]
+        //Output: [2]
 
+        //Example 2:
+
+        //Input: nums1 = [4, 9, 5], nums2 = [9, 4, 9, 8, 4]
+        //Output: [9, 4]
+        //Explanation: [4, 9] is also accepted.
+        #endregion
+
+        #region Solution
         public int[] Intersect(int[] nums1, int[] nums2)
         {
             Dictionary<int, int> freq = new Dictionary<int, int>();
@@ -32,12 +43,14 @@
             {
                 if (freq.ContainsKey(num) && freq[num] > 0)
                 {
-                    result.Add(num);
+                    if (!result.Contains(num)) // Only Reutrn Non-Duplicate as a result (1st example return [2] but if this condition removed it will return [2, 2]
+                        result.Add(num);
                     freq[num]--; // Decrease count
                 }
             }
 
             return result.ToArray();
         }
+        #endregion
     }
 }
