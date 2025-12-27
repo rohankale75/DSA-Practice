@@ -12,7 +12,7 @@ namespace DSAStriver._2._Arrays.LeetCodeProblems
         // nums = [2, 2, 1, 1, 1, 2, 2], output = 2
         // nums = [3,2,3] , output: 3
 
-        #region 1. Using Dictionary
+        #region 1. Using Dictionary 
         // Complexity:
         // 1. Time Complexity: O(n)
         //      We Loop once through all elements of Array nums
