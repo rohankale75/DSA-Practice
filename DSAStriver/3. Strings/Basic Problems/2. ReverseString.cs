@@ -25,5 +25,21 @@
             }
             return new string(ch);
         }
+
+        // 2nd solution
+        // Pattern: String splitting
+        string ReverseWords(string s)
+        {
+            string[] words = s.Split(' ');
+            string result = "";
+
+            for (int i = words.Length - 1; i >= 0; i--)
+            {
+                result += words[i] + " ";
+            }
+
+            return result.Trim();
+        }
+
     }
 }
