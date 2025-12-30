@@ -47,7 +47,22 @@ namespace DSAStriver._3._Strings.LeetCode
         #endregion
 
         #region Solution
+        public int FirstUniqChar(string s)
+        {
+            Dictionary<char, int> map = new Dictionary<char, int>();
 
+            foreach (char c in s)
+            {
+                if (!map.ContainsKey(c)) map[c] = 1;
+                else map[c]++;
+            }
+
+            for (int i = 0; i < s.Length; i++)
+            {
+                if (map[s[i]] == 1) return i;   // Return index of Key
+            }
+            return -1;
+        }
         #endregion
     }
 }

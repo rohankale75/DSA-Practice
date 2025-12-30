@@ -39,6 +39,25 @@ namespace DSAStriver._3._Strings.LeetCode
         #endregion
 
         #region Solution
+        // 1st Solution
+        public bool IsPalindromeMethod(string s)
+        {
+            int left = 0, right = s.Length - 1;
+
+            while (left < right)
+            {
+                while (left < right && !char.IsLetterOrDigit(s[left])) left++;
+                while (left < right && !char.IsLetterOrDigit(s[right])) right--;
+
+                if (char.ToLower(s[left]) != char.ToLower(s[right])) return false;
+
+                left++;
+                right--;
+            }
+            return true;
+        }
+
+        // 2nd Solution
         public bool IsPalindrome(string s)
         {
             s = Regex.Replace(s.ToLower(), "[^a-zA-Z0-9]", string.Empty);
