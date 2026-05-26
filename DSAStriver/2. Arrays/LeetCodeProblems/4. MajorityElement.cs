@@ -9,8 +9,9 @@ namespace DSAStriver._2._Arrays.LeetCodeProblems
     {
 
         // E.g. Arrays
-        // nums = [2, 2, 1, 1, 1, 2, 2], output = 2
-        // nums = [3,2,3] , output: 3
+        // solution: Majority Element should be more than (n/2) times
+        // nums = [2, 2, 1, 1, 1, 2, 2], output = 2 => (n/2) = (2/2) = 1 but array has 4 nos of 2 => pass
+        // nums = [3,2,3] , output: 3 => (n/2) = (3/2) = 1.5 but array has two nos of 3 => pass
 
         #region 1. Using Dictionary 
         // Complexity:
@@ -20,7 +21,7 @@ namespace DSAStriver._2._Arrays.LeetCodeProblems
         //      So Total = n * O(1) = O(n)
 
         // 2. Space Complexity: O(n)
-        // In the worst case scenario, all numbers might be unique, so might need to traverse the whole array to story 'n' key value pairs
+        // In the worst case scenario, all numbers might be unique, so might need to traverse the whole array to store 'n' key value pairs
         // So Space Complexity: O(n)
         public int MajorityElementDictionary(int[] nums)
         {
