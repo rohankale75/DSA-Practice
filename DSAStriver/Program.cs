@@ -14,11 +14,14 @@ Arrays arrays = new Arrays();
 //arrays.ArrayMethods();
 
 //arrays.LeetCodeMethods();
+
+//arrays.ClaudeAIMethods();
+arrays.StriverSheet();
 #endregion
 
 #region 3. Strings
-Strings str = new Strings();
-str.StringMethods();
+//Strings str = new Strings();
+//str.StringMethods();
 #endregion
 
 #region Helper Methods

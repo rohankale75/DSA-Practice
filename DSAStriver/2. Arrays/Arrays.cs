@@ -1,4 +1,7 @@
-﻿using DSAStriver._2._Arrays.LeetCodeProblems;
+﻿using DSAStriver._2._Arrays.Claude_AI;
+using DSAStriver._2._Arrays.Claude_AI._2._Binary_Search;
+using DSAStriver._2._Arrays.LeetCodeProblems;
+using DSAStriver._2._Arrays.Striver_Sheet.Easy;
 
 namespace DSAStriver._2._Arrays
 {
@@ -117,6 +120,93 @@ namespace DSAStriver._2._Arrays
             int[] arrayMaxSub = { -2, 1, -3, 4, -1, 2, 1, -5, 4 };
             Console.WriteLine("Maximum SubArray Sum is: " + maximum.MaximumSubArrayKadaneAlgo(arrayMaxSub));
             #endregion
+        }
+
+        public void ClaudeAIMethods()
+        {
+            //char[] ch = { 'a', 'b', 'c', 'a', 'b', 'c', 'b', 'b' };
+
+            //Console.WriteLine("Max SubArray Length: " + P006_SlidingWindow_Dynamic.MaxSubArrayLength(ch));
+
+            //int[] arr = { 2, 1, 5, 2, 3 };
+            //var result = P007_PrefixSum.PrefixSum(arr);
+            //foreach (var item in result)
+            //{
+            //    Console.Write(item + " ");
+            //}
+
+            //int[] arr = { 1, 2, 3 }; int k = 3;
+            //Console.WriteLine("HashMap Subarray Sum Pairs count: " + P008_PrefixSum_HashMap.SubArraySum(arr, k));
+
+            //int[] nums = { 0, 1, 0, 1, 1, 0 };
+            //Console.WriteLine("Max Length of Binary Array: " + P008_PrefixSum_HashMap.BinarySubArraySum(nums));
+
+            //int[] nums = { 4, 5, 6, 7, 0, 1, 2 }; int target = 0;
+            //Console.WriteLine("Binary Search: " + P001_E_BinarySearch.BinarySearch(nums, target));
+        }
+
+        public void StriverSheet()
+        {
+            //int[] nums = { 1, 2, 2, 4, 7, 7, 5 };
+            //Console.WriteLine("Brute Force Second largest: " + SecondLargestElement.BruteForceMethod(nums));
+            //Console.WriteLine("Better solution Second largest: " + SecondLargestElement.BetterSolution(nums));
+            //Console.WriteLine("Optimal Solution Second largest: " + SecondLargestElement.OptimalSolution(nums));
+
+            //int[] arr = { 1, 2, 2, 4, 7, 7, 5 };
+            //Console.WriteLine("Check if Array is Sorted: " + CheckIfArrayIsSortedOrNot.CheckIfArrayIsSorted(arr));
+
+            //int[] arr1 = { 1, 1, 2, 2, 3, 3, 3 };
+            //Console.WriteLine("Unique Array from Duplicate: " + RemoveDuplicatesFromSortedArray.RemoveDuplicates(arr1));
+
+            //int[] arr2 = { 1, 2, 3, 4, 5 };
+            //Console.WriteLine("Left Rotate Array By One Place: ");
+            //var result = LeftRotateArrayByOnePlace.LeftRotateArray(arr2);
+            //for (int i = 0; i <= result.Length - 1; i++)
+            //{
+            //    Console.Write($"{result[i]} ");
+            //}
+
+            //int[] arr3 = { 1, 2, 3, 4, 5, 6, 7 };
+            //int leftRotate = 3;
+            //Console.WriteLine("Left Rotate Array by D places: ");
+            //// leftRotateArray = LeftRotateArrayByDPlaces.LeftRotateByDPlaces(arr3, leftRotate);
+            //var leftRotateArray = LeftRotateArrayByDPlaces.LeftRotateByDPlacesOptimal(arr3, leftRotate);
+            //for (int i = 0; i < leftRotateArray.Length; i++)
+            //{
+            //    Console.Write($"{leftRotateArray[i]} ");
+            //}
+
+            //int[] nums = { 1, 0, 2, 3, 2, 0, 0, 4, 5, 1 };
+            //int[] nums1 = { 1, 2, 3, 2, 4, 5, 1 };
+            //var result1 = MoveZerosToEnd.MoveZeroToEndBruteForce(nums);
+            //for (int i = 0; i < result1.Length; i++)
+            //{
+            //    Console.Write($"{result1[i]}, ");
+            //}
+            //Console.WriteLine();
+            //var result2 = MoveZerosToEnd.MoveZeroToEndOptimal(nums1);
+            //for (int i = 0; i < result2.Length; i++)
+            //{
+            //    Console.Write($"{result2[i]}, ");
+            //}
+
+            // 9. Unique of Two Sorted Arrays
+            //Console.WriteLine();
+            //int[] a = { 1, 1, 2, 3, 4, 5 };
+            //int[] b = { 2, 3, 4, 4, 5, 6 };
+            //var res = UnionOfTwoSortedArrays.UnionOfTwoSortedArrayBruteForce(a, b);
+            //for (int i = 0; i < res.Length; i++)
+            //{
+            //    Console.Write($"{res[i]}, ");
+            //}
+
+            // 10. Find Missing Number
+            int[] arr = { 8, 2, 4, 5, 3, 7, 1 };
+            Console.WriteLine("Missing Number: " + FindMissingNumber.FindMissingNumberMethod(arr));
+
+            // 11. Maximum Consecutive Ones
+            int[] arr1 = { 1, 1, 0, 1, 1, 1, 0, 1, 1, 1, 1 };
+            Console.WriteLine("Max Consecutive ones count: " + MaximumConsecutiveOnes.MaxConsecutiveOnes(arr1));
         }
     }
 
